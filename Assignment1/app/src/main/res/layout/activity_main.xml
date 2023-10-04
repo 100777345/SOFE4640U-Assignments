@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="EMI Calculator\n(Monthly Payment)"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/mortgageInput"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="e.g. 100,000.00"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appHeader" />
+
+    <EditText
+        android:id="@+id/interestInput"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="e.g. 5.00%"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mortgageInput" />
+
+    <EditText
+        android:id="@+id/amortYearsInput"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="e.g. 25"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestInput" />
+
+    <TextView
+        android:id="@+id/mortgageTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mortgage ($):"
+        app:layout_constraintBottom_toBottomOf="@+id/mortgageInput"
+        app:layout_constraintEnd_toStartOf="@+id/mortgageInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mortgageInput"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <TextView
+        android:id="@+id/interestTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interest Rate (%):"
+        app:layout_constraintBottom_toBottomOf="@+id/interestInput"
+        app:layout_constraintEnd_toStartOf="@+id/interestInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/interestInput" />
+
+    <TextView
+        android:id="@+id/amortYearsTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amortization Period\n(Years):"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/amortYearsInput"
+        app:layout_constraintEnd_toStartOf="@+id/amortYearsInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/amortYearsInput"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/monthlyPayOutput"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="160dp"
+        android:hint="Results Here"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amortYearsInput" />
+
+    <TextView
+        android:id="@+id/monthlyPayTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMI ($):"
+        app:layout_constraintBottom_toBottomOf="@+id/monthlyPayOutput"
+        app:layout_constraintEnd_toStartOf="@+id/monthlyPayOutput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/monthlyPayOutput" />
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
