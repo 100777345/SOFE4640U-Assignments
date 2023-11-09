@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/lat_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/add_location_border"
+        android:hint="Latitude"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBorder"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/long_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/add_location_border"
+        android:hint="Longitude"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBorder"
+        android:textSize="12dp" />
+
+
+</LinearLayout>
